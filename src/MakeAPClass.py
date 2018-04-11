@@ -19,4 +19,4 @@ class MakeAPClass:
             print "Interrupt"
             exit()
         except:
-            print "Error Ap"
+            print "Error AP"
