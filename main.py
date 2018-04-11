@@ -6,4 +6,4 @@
 from src.MakeAPClass import MakeAPClass
 
 ap = MakeAPClass("22:a3:aa:a0:ba:42", "TEST", 2, "wlan0mon")
-ap.makeAP()
+ap.makeHostapdConfig()
