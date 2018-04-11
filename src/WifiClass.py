@@ -13,10 +13,12 @@ class WifiClass:
             ap.append(c)
         return ap
 
-    def serachSSID(self, ssid):
+    def searchSSID(self, ssid):
+        f = []
         for c in self.apAvailable:
-            if ssid in c:
-                return c
+            if ssid in c.ssid:
+                f.append(c)
+        return f
     
     def getApAvailable(self):
         return self.apAvailable
