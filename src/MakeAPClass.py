@@ -17,6 +17,3 @@ class MakeAPClass:
             print err
         except KeyboardInterrupt:
             print "Interrupt"
-            exit()
-        except:
-            print "Error AP"
