@@ -12,3 +12,5 @@
 ## Requirements
 
 pip install wifi : https://wifi.readthedocs.io/en/latest/wifi_command.html
+apt-gte install hostapd
+apt-get install isc-dhcp-server
