@@ -7,3 +7,8 @@
 ### DNSspoofing
 ### Fake fishing page
 ### Evil twin
+
+
+## Requirements
+
+pip install wifi : https://wifi.readthedocs.io/en/latest/wifi_command.html
