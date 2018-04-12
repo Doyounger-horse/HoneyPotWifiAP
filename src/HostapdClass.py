@@ -1,8 +1,8 @@
 from src.ExecCommandClass import ExecCommandClass
 class HostapdClass:
 
-    def __init__(self, interfaceMon, ssid, chanel):
-        self.interfaceMon = interfaceMon
+    def __init__(self, wirelessInterface, ssid, chanel):
+        self.wirelessInterface = wirelessInterface
         self.ssid = ssid
         self.chanel = chanel
         self.filenameconf = "/etc/hostapd/hostapd.conf"
@@ -11,7 +11,7 @@ class HostapdClass:
     def makeHostapdConfig(self):
         file = open(self.filenameconf,"w")
         file.write("# interface wlan du Wi-Fi\n")
-        file.write("interface="+str(self.interfaceMon)+"\n")
+        file.write("interface="+str(self.wirelessInterface)+"\n")
         file.write("# nl80211 avec tous les drivers Linux mac80211\n")
         file.write("driver=nl80211"+"\n")
         file.write("# Nom du spot Wi-Fi\n")
