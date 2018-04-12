@@ -35,4 +35,5 @@ class HostapdClass:
         file.close()
 
     def startHostpad(self):
-        self.command.execCommand("hostapd -dd -B "+str(self.filenameconf)
+        self.makeHostapdConfig()
+        self.command.execCommand("hostapd -dd -B "+str(self.filenameconf))
