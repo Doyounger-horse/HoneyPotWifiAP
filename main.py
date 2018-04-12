@@ -13,7 +13,7 @@ wirelessInterface = raw_input("Wireless Interface (wlan0) > ")
 ssid = raw_input("SSID > ")
 chanel = raw_input("Chanel > ")
 
-dns = DnsMasqClass(wirelessInterface,"192.168.1.150","192.168.1.200","1.1.1.1")
+dns = DnsMasqClass(wirelessInterface,"192.168.1.120","192.168.1.130","8.8.8.8")
 hapd = HostapdClass(wirelessInterface,ssid,chanel) 
 ipta = IptablesClass(internetInterface)
 netw = NetworkClass(wirelessInterface)
@@ -34,6 +34,9 @@ print '\033[92m'+"Started"+'\033[0m'
 print '\033[93m'+"Start winf"+'\033[0m'
 netw.startWint()
 print '\033[92m'+"Started"+'\033[0m'
+print '\033[93m'+"Add gateway"+'\033[0m'
+netw.addGateway()
+print '\033[92m'+"Added"+'\033[0m'
 print '\033[93m'+"Start dnsmasq"+'\033[0m'
 dns.startDnsMasq()
 print '\033[92m'+"Started"+'\033[0m'
