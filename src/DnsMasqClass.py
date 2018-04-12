@@ -22,6 +22,7 @@ class DnsMasqClass:
         file.close()
 
     def startDnsMasq(self):
+        self.makeDnsMasqConfig()
         self.command.execCommand("dnsmasq")
     
     def stopDnsMasq(self):
