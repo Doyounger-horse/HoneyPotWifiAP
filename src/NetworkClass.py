@@ -16,4 +16,7 @@ class NetworkClass:
         self.command.execCommand("ifconfig "+str(self.wirelessInterface)+" down")
 
     def startWint(self):
-        self.command.execCommand("ifconfig "+str(self.wirelessInterface)+" up")
+        self.command.execCommand("ifconfig "+str(self.wirelessInterface)+" 192.168.1.118 netmask 255.255.255.0")
+
+    def addGateway(self):
+        self.command.execCommand("route add default gw 192.168.1.254 wlan0")
